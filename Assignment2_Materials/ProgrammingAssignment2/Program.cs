@@ -33,15 +33,27 @@ namespace ProgrammingAssignment2
 				// and the comment below. You can of
 				// course add more space between the
 				// comments as needed
-
-
-
+				int sum = 0;
+				int count = 0;
+				float mean = 0f;
+				int value = GetValue();
+				while (value != -1)
+				{
+					count++;
+					sum = sum + value;
+					value = GetValue();
+				}
+				if (count > 0)
+				{
+					mean = (float)sum / count;
+				}
+				Console.WriteLine(count + " " + mean);
 				// Don't add or modify any code below
 				// this comment
 				input = Console.ReadLine();
 			}
 		}
-
+		//The Code uses get value to average the numbers 
 		/// <summary>
 		/// Builds a linked list of input values from provided string
 		/// </summary>
